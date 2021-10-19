@@ -1,16 +1,10 @@
 name: 'AWS Security Group Add IP'
 description: 'Add IP address to your AWS security group'
-author: 'Sohel Amin'
+author: 'Charles Sullivan'
 branding:
   icon: 'lock'
   color: 'red'
 inputs:
-  aws-access-key-id:
-    description: 'AWS Access Key ID'
-    required: true
-  aws-secret-access-key:
-    description: 'AWS Secret Access Key'
-    required: true
   aws-region:
     description: 'AWS Region'
     required: true
@@ -30,7 +24,7 @@ inputs:
     required: false
     default: 'tcp'
   description:
-    description: 'The descriptipn of your IP permission'
+    description: 'The description of your IP permission'
     required: false
     default: 'GitHub Action'
 runs:

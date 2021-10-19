@@ -6,14 +6,6 @@ And it will remove the added ip address once the main job is completed.
 
 ## Inputs
 
-### `aws-access-key-id`
-
-**Required** AWS Access Key ID.
-
-### `aws-secret-access-key`
-
-**Required** AWS Secret Access Key.
-
 ### `aws-region`
 
 **Required** AWS Region.
@@ -67,11 +59,13 @@ Replace `your-region`, `your-account-id` and `your-security-group-id` with appro
 
 ## Example usage
 ```yaml
+- name: Configure AWS Credentials
+  uses: aws-actions/configure-aws-credentials@master
+  
+  # Plugin assumes credentials were configured in the previous step
 - name: Add public IP to AWS security group
-  uses: sohelamin/aws-security-group-add-ip-action@master
+  uses: CharlieSu/aws-security-group-add-ip-action@main
   with:
-    aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-    aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     aws-region: 'us-east-1'
     aws-security-group-id: ${{ secrets.AWS_SECURITY_GROUP_ID }}
     port: '22'
