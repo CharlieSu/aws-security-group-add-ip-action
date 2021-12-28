@@ -18,7 +18,7 @@
   "dependencies": {
     "@actions/core": "^1.2.6",
     "aws-sdk": "^2.670.0",
-    "public-ip": "^4.0.1"
+    "public-ip": "^5.0.0"
   },
   "devDependencies": {
     "@zeit/ncc": "^0.22.2"
